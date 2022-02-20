@@ -59,11 +59,11 @@ namespace GetRemoInfo
 
             var response = new Response();
             response.ResultMessage = "SUCCESS";
-            response.Data = sortedResult;
+            response.RemoData = sortedResult;
             response.StartDateTime = sortedResult.First().DateTime;
             response.EndDateTime = sortedResult.Last().DateTime;
-            response.AvarageRoomTemperature = sortedResult.Average(x => x.OutdoorTemperature).ToString();
-            response.AvarageOutdoorTemperature = sortedResult.Average(x => x.RoomTemperature).ToString();
+            response.AverageOutdoorTemperature = sortedResult.Average(x => x.OutdoorTemperature).ToString();
+            response.AverageRoomTemperature = sortedResult.Average(x => x.RoomTemperature).ToString();
 
             return response;
         }
